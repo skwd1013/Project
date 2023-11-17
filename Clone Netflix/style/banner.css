@@ -1,0 +1,48 @@
+.banner{
+    background-image: url('/Clone\ Netflix/assets/poster/부산행.jpg') ;
+    background-size: cover;
+    background-position: center center;
+    color:white;
+    object-fit: contain;
+    height:700px;
+    margin-bottom:20px;
+}
+
+.banner_content{
+    margin-left: 30px;
+    padding-top: 140px;
+    height:190px;
+}
+
+.banner_tilte{
+    font-size :3rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+}
+
+.banner_descript{
+    width:45rem;
+    line-height: 1.3;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    max-width: 360px;
+    height: 180px;
+}
+
+.banner_button{
+    cursor: pointer;
+    color: #FFFFFF;
+    outline: none;
+    border:none;
+    font-weight: 700;
+    border-radius: 0.2vw;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    margin-right: 1rem;
+    background-color: rgba(51,51,51,0.5);
+}
+
+.banner_button:hover{
+    color:black;
+    background-color: #e6e6e6;
+    transition: all 0.2s;
+}
