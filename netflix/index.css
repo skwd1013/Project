@@ -1,0 +1,134 @@
+*{
+    margin :0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+}
+
+.navbar{
+    background-color: black;
+    position: fixed;
+    top:0;
+    width: 100%;
+    
+    z-index:10;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+
+}
+.navbar li{
+    list-style: none;
+    padding: 1rem;
+}
+
+.navbar li a{
+    padding: 2px 2px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.navbar li a:hover{/*호버하면 색 회색으로 변경*/
+    color: gray;
+}
+
+
+
+.logo{
+    height: 45px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 100%; /* 부모의 사진과 동일하게*/
+}
+
+
+/*banner*/
+.banner{
+    background-image: url(images/banner.jpg);
+    height: 448px;
+    color: white;
+    background-size: cover; 
+    /*사진으로전체를 채우고 싶다면 width:100%가 아니라 cover를 쓴다*/
+    background-position: center;
+}
+
+.banner_contents{
+    padding-top: 190px;
+    margin-left: 30px;
+    height: 190px;
+}
+
+.banner_title{
+    font-size:3rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+}
+
+.banner_btn{
+    margin-top: 5px ;
+    margin-bottom: 10px;
+}
+
+.banner_btn button{
+    width: 60px;
+    height: 30px;
+    border-radius: 2px;
+    border : 1px solid transparent;
+}
+.banner_btn button:hover{
+    background-color: rgb(171,163,163);
+    cursor: pointer;
+}
+
+.banner_descripton{
+    line-height: 1.5;
+    padding-top: 0.5rem;
+    font-size: 1rem;
+}
+
+/*row*/
+.row{
+    color: white;
+}
+
+.row h2{
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+
+
+.row_posters{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 20px;
+}
+
+.row_poster{
+    width: 100%;   
+    max-height: 100px;
+    object-fit: contain;
+    margin-right: 10px;
+    transition: transform 500ms;
+}
+
+.row_poster:hover{
+    transform: scale(1.1);
+    
+}
+
+.row_posters::-webkit-scrollbar{
+    display: none;
+}

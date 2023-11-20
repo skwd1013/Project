@@ -1,5 +1,6 @@
 # Project november
 국비수업 11월 과제 저장소
+Clone Netflix
 
 1.헤더 만들기
     1-1. 넷플릭스 로고 <img> 태그로 가져오기 
@@ -13,3 +14,9 @@
     3-1.드라마 포스터
     3-2. 호버하면 포스터 커지게 
 
+
+
+
+Todo App for javascript
+
+1.
