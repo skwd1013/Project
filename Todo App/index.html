@@ -1,37 +1,41 @@
-<!DOCTYPE html>
+   
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TODOS</title>
+    <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
     <link rel="stylesheet" href="style.css">
-    </style>
+
 </head>
 
 <body>
-
-    <header class="header">
-        <div class="logo">Todos 앱</div>
-        <div>
-            <a class="todo_add_btn" href="#" onClick="todoadd()">
-                새로운 TODO 추가하기</a>
-        </div>
-    </header>
+    
     <main>
-        <div class="todo_container">
-            <ul class="todos">
-                <li class="todo">
-                    <check></check>
-                </li>
-                <li class="todo">
-                    <check></check>
-                </li>
-            </ul>
-        </div>
-        <script src="script.js"></script>
-    </main>
+        <div class="app">
+            <header>
+                <h1>Todos 앱</h1>
+                <button id="create-btn">새로운 todo 추가하기</button>
+            </header>
 
+
+            <div class="todo-list" id="list">
+                
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    
 </body>
 
-</html>
+</html>  
+
+
+
+
+
