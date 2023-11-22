@@ -101,7 +101,7 @@ function createElement(item) {
 
     return { itemEl, textEl, editBtn, deleteBtn };
 }
-
+//todos 배열에 있는 내용 출력
 function displayTodos() {
     loadFromlocalStorage();
 
