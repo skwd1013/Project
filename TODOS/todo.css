@@ -1,0 +1,127 @@
+*{
+    padding:0px;
+    margin: 0px;
+}
+body{
+    background-color: coral;
+}
+
+main{
+    width:96%;
+    margin-left: auto;;
+    margin-right: auto;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+header h1{
+    text-align: center;
+    font-weight: 600;
+    color:white
+}
+
+header button{
+    background: none;
+    border: none;
+    font-weight: 600;
+    font-size: 30px;
+    color:white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.todo_list{
+    display: grid;
+    list-style-type: none;
+}
+
+
+.todo{
+    background-color: aquamarine;
+    width: 100%;
+    height:30px;
+    
+}
+
+/* .item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1.5rem;
+	border-radius: 1rem;
+	background-color: lightblue;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+	margin-bottom: 1.5rem;
+} */
+
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aquamarine;
+    padding: 1rem; 
+    margin-top:10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 1.5rem; 
+    border-radius: 1vw;
+} 
+
+.item input[type="checkbox"]{
+    margin-left: 10px;
+}
+
+.item.complete{
+    background-color: gray;
+}
+
+.item.complete input[type="text"] {
+    text-decoration-line: line-through;
+} 
+.item input[type="text"]{
+    margin-right: auto;
+    margin-left:10px;
+    border: none;
+    width:85%;
+    background-color: transparent;
+    font-size: 24px;
+    
+} 
+
+.item input[type="text"]:focus{
+    outline: none;
+    border:0;
+
+}
+ .item input[type="text"]:not(:disabled) {
+	border-bottom: 2px solid #fff;
+} 
+
+
+
+.item:hover,
+.item:focus-within {
+	outline: 2px solid #fff;
+}
+
+.actions{
+    display :flex;
+    align-items: center;
+    width:120px;
+    justify-content: space-between;
+    padding-right: 30px;
+}
+.icons{
+    display: flex;
+    color:transparent;
+
+}
+.icons img{
+    width:40px;
+    height:40px;
+    cursor: pointer;
+    background-color: none;
+}
+
