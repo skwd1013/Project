@@ -99,6 +99,7 @@ function createNewTodo() {
     textEl.removeAttribute("disabled");
 
     textEl.focus();
+    
     saveToLocalStorage();
 }
 
