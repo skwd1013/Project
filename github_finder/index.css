@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.header{
+
+    background-color: cornflowerblue;
+    position: relative;
+    margin-bottom: 10px;
+}
+.header h1{
+    color: white;
+    margin :0;
+    padding: 0;
+}
+.search_container {
+    border: 1px solid black;
+    margin: 1px 10px 10px 10px;
+}
+
+.search_window{
+    margin: 1px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.foot{
+    margin-top: 3rem;
+    padding : 1rem;
+
+    text-align: center;
+    
+
+}
