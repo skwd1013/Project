@@ -1,3 +1,4 @@
+
 class UI {
   constructor() {
     this.profile = document.getElementById("profile");
@@ -106,8 +107,7 @@ class UI {
 
 class Github {
   constructor() {
-    this.client_id = config.client_id;
-    this.client_secret = config.client_secret;
+ 
     this.repos_count = "5";
     this.repos_sort = "created:asc";
   }
@@ -115,22 +115,12 @@ class Github {
   async getUser(user) {
 
     const profileResponse = await fetch(
-      `https://api.github.com/users/${user}
-      ?client_id=${this.client_id}&client_secret=${this.client_secret}`
-      , {
-        headers: {
-          Authorization: "token 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"
-        }
-      }
+      `https://api.github.com/users/${user}`
     )
 
     const repoResponse = await fetch(
       `https://api.github.com/users/${user}
-      /repos?per_page=${this.repos_count}&sort=${this.repos_sort}&client_id=${this.client_id}&client_secret=${this.client_secret}` , {
-        headers: {
-          Authorization: "token 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"
-        }
-      }
+      /repos?per_page=${this.repos_count}&sort=${this.repos_sort}`
     )
 
  
