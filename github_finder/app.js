@@ -106,8 +106,8 @@ class UI {
 
 class Github {
   constructor() {
-    this.client_id = "ceacbe2a258a41cc80ff";
-    this.client_secret = "2ede5ba01f957c930ad2ed0f780f2c1632941443";
+    this.client_id = config.client_id;
+    this.client_secret = config.client_secret;
     this.repos_count = "5";
     this.repos_sort = "created:asc";
   }
