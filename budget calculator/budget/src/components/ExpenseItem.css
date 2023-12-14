@@ -1,0 +1,60 @@
+.item {
+    background-color: white;
+    line-height: 1.5rem;
+    padding: 10px 20px;
+    margin-bottom: 1rem;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* transition: all 0.3s linear; */
+  }
+  
+  /* .item:hover {
+    width: 92%;
+    transform: scale(1.02);
+  } */
+  
+  .info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+  }
+  .info .expense, .info .amount {
+    flex-basis: 100px; /* 예시 너비, 필요에 따라 조정 */
+    text-align: left; /* 왼쪽 정렬 */
+    margin-right: 2rem;
+}
+  .expense {
+    margin-right: 3rem;
+  }
+  
+  .amount {
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 1px 3px;
+  }
+  
+  .edit-btn,
+  .clear-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .clear-btn {
+    color: red;
+  }
+  .edit-btn {
+    color: Green;
+  }
+
+  .editing-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}

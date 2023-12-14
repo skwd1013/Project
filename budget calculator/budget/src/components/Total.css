@@ -1,0 +1,10 @@
+/* Total.css */
+
+.total-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.total-amount {
+    font-size: 2rem;
+}
