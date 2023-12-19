@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    color: purple;
+    height :34px;
+    border-bottom: 2px solid black;
+  }
+  
+  .logo {
+    font-size: 23px;
+    font-weight: bold;
+    margin-right: auto;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 20px;
+  }
+  .icons:hover {
+    cursor: pointer;
+  }

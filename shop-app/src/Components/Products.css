@@ -1,0 +1,30 @@
+.products-container {
+    text-align: center;
+  }
+  
+  .buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: white;
+    color: black;
+    border: 2px solid #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  .product-details p {
+    margin-right: 10px;
+}
+  button:hover {
+    background-color: #333;
+    color: white;
+    border-color: transparent;
+  }

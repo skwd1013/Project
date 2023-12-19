@@ -1,0 +1,81 @@
+/* General Styles */
+.products-container {
+    text-align: center;
+    font-family: 'Arial', sans-serif; /* Use a modern, clean font */
+    background-color: #f4f4f4; /* A light background color */
+    color: #333; /* A dark text color for contrast */
+}
+
+/* Product List */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start; /* Adjust for better spacing */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Product Cards */
+.product {
+    width: calc(20% - 10px);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd; /* Softer border color */
+    padding: 15px;
+    background-color: white; /* Card background */
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.product:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15); /* Enhanced shadow on hover */
+}
+
+/* Image Container */
+.image-container {
+    width: 100%; /* Full width */
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: 200px; /* 이미지 높이 고정 */
+    object-fit: cover; /* 이미지가 컨테이너를 채우도록 조정 */
+}
+
+/* Product Info */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.product-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+/* Typography */
+.product p {
+    margin: 0;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 150px; /* 텍스트 너비 제한 */
+}
+
+
