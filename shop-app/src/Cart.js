@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CartSingleton from "./CartSingleton";
+import { Link } from "react-router-dom";
 import "./Cart.css";
 
 const Cart = () => {
@@ -28,11 +29,13 @@ const Cart = () => {
           <ul className="cart-items">
             {cartItems.map((item, index) => (
               <li key={index} className="cart-item">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="cart-item-img"
-                />
+                <Link to={`/product/${item.id}`}>
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="cart-item-img"
+                  />
+                </Link>
                 <div className="cart-item-info">
                   <strong className="cart-item-title">상품명:</strong>{" "}
                   {item.title}
