@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./ProductList.css";
 import CartSingleton from "../CartSingleton";
+import { Link } from "react-router-dom";
 
 const ProductList = ({ category }) => {
   const [products, setProducts] = useState([]);
@@ -37,7 +38,9 @@ const ProductList = ({ category }) => {
         {products.map((product) => (
           <div key={product.id} className="product">
             <div className="image-container">
-              <img src={product.image} alt={product.title} />
+              <Link to={`/product/${product.id}`}>
+                <img src={product.image} alt={product.title} />
+              </Link>
             </div>
             <div className="product-info">
               <p>{product.title}</p>

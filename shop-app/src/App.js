@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Im
 import Header from "./Components/Header";
 import Cart from "./Cart";
 import Login from "./Login";
-
+import ProductDetail from "./Components/ProductDetail";
 import Products from "./Components/Products";
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
         <Route path="/" element={<Products />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
       </Routes>
     </Router>
   );
