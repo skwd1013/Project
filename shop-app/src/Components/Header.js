@@ -31,7 +31,7 @@ const Header = () => {
         <Link to="/cart">
           <img src="/images/cart.png" alt="cart"></img>
         </Link>
-        <Link to="/mypage">
+        <Link to="/cart">
           <img src="/images/mypage.png" alt="mypage"></img>
         </Link>
         {isLoggedIn ? (
