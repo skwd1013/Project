@@ -1,0 +1,167 @@
+.App {
+  text-align: center;
+  display: flex;
+  background-color: aquamarine;
+  height: 100%;
+}
+
+.Left {
+  width: 30%;
+  height: 100%;
+  background-color: #fdefc4;
+}
+.Main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Tag {
+  border: 0;
+  background-color: transparent;
+  display: block;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.Tag-Edtior-Letter {
+  font-size: larger;
+  font-weight: normal;
+}
+
+.Like-Letter {
+  border: 0;
+  background-color: transparent;
+  font-size: larger;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.Right {
+  width: 70%;
+  height: 100%;
+  background-color: white;
+}
+
+.Box {
+  border-radius: 0.5rem;
+  width: 23%;
+  border: 0.5px solid #cfcfcf;
+  margin: 2px;
+}
+
+.Tbox {
+  background-color: rgb(200, 200, 200, 0.3);
+}
+
+.Row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Filter {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  background-color: rgb(125, 125, 125, 0.9);
+  z-index: 1;
+  /* 양수일 수록 위로 올라옴 */
+}
+
+.Editor {
+  background-color: white;
+  position: absolute;
+  display: block;
+  width: 830px;
+  height: 500px;
+  left: 38%;
+  top: 40%;
+  margin-left: -150px;
+  margin-top: -150px;
+  z-index: 2;
+}
+.Width-Setting {
+  width: 800px;
+}
+.Height-Setting {
+  height: 300px;
+  border: none;
+  resize: none;
+}
+.Tag-Edtior {
+  position: absolute;
+  display: block;
+  width: 300px;
+  height: 300px;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+  background-color: white;
+  z-index: 2;
+}
+
+.No-Show {
+  display: none;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.Red {
+  background-color: #ffcdcd;
+}
+.White {
+  background-color: White;
+}
+.Green {
+  background-color: #b2f5bb;
+}
+.Blue {
+  background-color: #cbe0ff;
+}
+
+.Display-Flex {
+  display: flex;
+  justify-content: flex-start;
+}
+.Display-Left {
+  margin-right: auto;
+  padding-left: 80px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-float infinite 3s ease-in-out;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: rgb(112, 76, 182);
+}
+
+@keyframes App-logo-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
