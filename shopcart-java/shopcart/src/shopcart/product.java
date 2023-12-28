@@ -2,13 +2,13 @@ package shopcart;
 
 import java.util.Objects;
 public class product {
-    int key;
+    String key;
     String name;
     int price;
 
     //Product 생성자
     public product(String key, String name, int price) {
-        this.key = hashCode();
+        this.key = key;
         this.name = name;
         this.price = price;
     }
@@ -18,12 +18,12 @@ public class product {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         product product = (product) o;
-        return name.equals(product.name);
+        return key.equals(product.key);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name+price);
+        return Objects.hash(key);
     }
 
     public String getName() {
