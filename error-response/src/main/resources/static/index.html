@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center; /* Center-align the content horizontally */
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+ input#findGrade {
+            width: 600px;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            font-size: 14px; /* Make the font size smaller */
+            display: inline; /* Display the button inline with the label */
+            vertical-align: middle; /* Center the button vertically with the label */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        #results {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .grade-input-container {
+            display: flex;
+            align-items: center;
+        }
+
+
+    </style>
+</head>
+<body>
+<h1>Add Student</h1>
+<form id="addStudentForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required /><br />
+
+    <label for="grade">Grade:</label>
+    <input type="number" id="grade" required /><br />
+
+    <input type="submit" value="Add Student" />
+</form>
+
+<h1>Sort Students by Grade</h1>
+<button id="sortButton">Sort by Grade</button>
+
+<h1>Find Students by Grade</h1>
+Grade: <input type="number" id="findGrade" />
+<button id="findButton">Find Students</button>
+
+<div id="results">
+
+<script>
+    document.getElementById("addStudentForm").addEventListener("submit", function (e) {
+     e.preventDefault();
+     const name = document.getElementById("name").value;
+     const grade = parseInt(document.getElementById("grade").value);
+
+     fetch("/students/add", {
+         method: "POST",
+         headers: {
+             "Content-Type": "application/json"
+         },
+         body: JSON.stringify({ name, grade })
+     })
+     .then(response => response.json())
+     .then(apiResponse => {
+         if (apiResponse.status && apiResponse.status.code === 200) {
+             alert(apiResponse.status.message);
+             // Update to handle the list of students
+             displayStudents(apiResponse.results);
+             document.getElementById("name").value = '';
+             document.getElementById("grade").value = '';
+         } else if (apiResponse.status) {
+             alert(apiResponse.status.message);
+         }
+     })
+     .catch(error => {
+         console.error("Error adding student:", error);
+         alert("Failed to add student.");
+     });
+ });
+
+ document.getElementById("sortButton").addEventListener("click", function () {
+     fetch("/students/sortByGrade")
+     .then(response => response.json())
+     .then(apiResponse => {
+         if (apiResponse.status && apiResponse.status.code === 200) {
+             // Update to handle the list of students
+             displayStudents(apiResponse.results);
+         } else {
+             console.error("Error sorting students:", apiResponse.status.message);
+         }
+     })
+     .catch(error => console.error("Error fetching data:", error));
+ });
+
+ document.getElementById("findButton").addEventListener("click", function () {
+     const grade = parseInt(document.getElementById("findGrade").value);
+
+     fetch(`/students/findByGrade/${grade}`)
+     .then(response => response.json())
+     .then(apiResponse => {
+         if (apiResponse.status && apiResponse.status.code === 200) {
+             // Update to handle the list of students
+             displayStudents(apiResponse.results);
+         } else {
+             console.error("Error finding students:", apiResponse.status.message);
+         }
+     })
+     .catch(error => console.error("Error fetching data:", error));
+ });
+
+ function displayStudents(students) {
+     const resultsDiv = document.getElementById("results");
+     resultsDiv.innerHTML = "";
+
+     if (!Array.isArray(students)) {
+         console.error("Expected an array but received:", students);
+         resultsDiv.textContent = "Error: Data format is incorrect.";
+         return;
+     }
+
+     if (students.length === 0) {
+         resultsDiv.textContent = "No students found.";
+         return;
+     }
+
+     const ul = document.createElement("ul");
+     students.forEach(student => {
+         const li = document.createElement("li");
+         li.textContent = `${student.name} - Grade: ${student.grade}`;
+         ul.appendChild(li);
+     });
+     resultsDiv.appendChild(ul);
+ }
+
+</script>
+</body>
+</html>
